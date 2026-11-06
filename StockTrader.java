@@ -162,12 +162,12 @@ public class StockTrader {
                     shares = canBuy;
                     cash = cash - shares * prices[i] - FEE;
                     boughtAt = prices[i];
-                    System.out.printf("%s %d: TRAFFICKED %d children at $%.2f%n", monthName(months[i]),
+                    System.out.printf("%s %d: BUY %d shares at $%.2f%n", monthName(months[i]),
                         years[i], shares, prices[i]);
                 }
             } else if (action.equals("SELL") && shares > 0) {
                 cash = cash + shares * prices[i] - FEE;
-                System.out.printf("%s %d: SOLD %d children at $%.2f%n", monthName(months[i]),
+                System.out.printf("%s %d: SOLD %d shares at $%.2f%n", monthName(months[i]),
                     years[i], shares, prices[i]);
                 shares = 0;
                 boughtAt = 0.0;
